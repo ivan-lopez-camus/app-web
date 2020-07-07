@@ -1,0 +1,26 @@
+<h1>{{ordenador.nombre}}<small>{{ordenador.pantalla}}</small></h1>>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+
+       <img [src]="ordenador.img" class="img-fluid" [alt]="ordenador.nombre">
+       <br><br>
+       <a [routerLink]="['/ordenadores']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+    <div class="col-md-8">
+        <h3>{{ordenador.nombre}}</h3>
+        <hr>
+        <p>{{ordenador.info}}</p>
+        <br>
+        <p>{{ordenador.pantalla}}</p>
+        <br>
+        <p>{{ordenador.datos}}</p>
+        <br>
+
+        <h2>{{ordenador.precio}}</h2>
+        <hr>
+    
+
+    </div>
+</div>

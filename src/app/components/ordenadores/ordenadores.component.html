@@ -1,0 +1,20 @@
+<h1>Ordenadores</h1>>
+<hr>
+
+<div class="card-columns">
+    
+    <div class="card animated fadeIn fast" *ngFor="let ordenador of ordenadores; let i=index">
+        <img [src]="ordenador.img" class="card-img-top" [alt]="ordenador.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{ordenador.nombre}}</h5>
+          <p class="card-text">{{ordenador.info}}</p>
+          <p class="card-text"><small class="text-muted">{{ordenador.pantalla}}</small></p>
+          <button (click)="verOrdenador(i)"
+          type ="button" class="btn btn-outline-primary btn-block">
+          Ver Mas.....
+          </button>
+          <!--a [routerLink]="['/ordenador',i]" class="btn btn-outline-primary">Ver mas link..</a-->
+        </div>
+    </div>
+
+</div>
