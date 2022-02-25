@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdenadoresService, Ordenador } from '../../servicios/ordenadores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -6,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  ordenadores:Ordenador[]=[];
+  constructor(
+    private _ordenadoresService:OrdenadoresService,
+  ) { }
 
   ngOnInit(): void {
+    this.ordenadores=this._ordenadoresService.getOrdenadores();
   }
 
 }

@@ -1,2 +1,8 @@
 <h1 class="animated fadeIn fast ">Sobre los ordenadores</h1>
 <p>Es una pequeña app que muestra algunos ordenadores</p>
+
+<div class="card-columns">
+<div *ngFor="let ordenador of ordenadores" class="card" style="width: 18rem;">
+  <img [src]="ordenador.img" class="card-img-top" alt="...">
+</div>
+</div>
